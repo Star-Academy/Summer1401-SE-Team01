@@ -1,6 +1,7 @@
-package com.FileReader;
+package com;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 public class Doc {
@@ -10,7 +11,7 @@ public class Doc {
 
     public Doc (String documentName_, String contex) {
         documentName = documentName_;
-        contex = deletePunctuationMarks(contex);
+        contex = deletePunctuationMarks(contex).toUpperCase();
         words = tokenizeString(contex);
     }
 

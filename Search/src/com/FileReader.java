@@ -1,6 +1,6 @@
-package com.FileReader;
+package com;
 
-import com.FileReader.Doc;
+import com.Doc;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class FileReader {
         String [] filesName = detectFilesName();
 
         for (int i = 0; i < filesName.length; i++) {
-                File file = new File("D:\\Code Star\\FileReader\\tests\\" + filesName[i]);
+                File file = new File("tests/" + filesName[i]);
                 String contex = getFileContex(file);
 
                 documents.add(new Doc(filesName[i], contex));
@@ -41,7 +41,7 @@ public class FileReader {
 
     public String [] detectFilesName() {
 
-        File file = new File("D:\\Code Star\\FileReader\\tests");
+        File file = new File("tests/");
         String [] filesName = file.list();
         return  filesName;
     }
