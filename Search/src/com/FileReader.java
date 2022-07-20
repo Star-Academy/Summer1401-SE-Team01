@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
-    private ArrayList<Doc> documents = new ArrayList<Doc>();
+    private static ArrayList<Doc> documents = new ArrayList<Doc>();
 
-    public ArrayList<Doc> readFiles() {
+    public static ArrayList<Doc> readFiles() {
         String [] filesName = detectFilesName();
 
         for (int i = 0; i < filesName.length; i++) {
@@ -21,7 +21,8 @@ public class FileReader {
 
         return documents;
     }
-    public String getFileContex (File file) {
+
+    public static String getFileContex (File file) {
         String contex = "";
 
         try {
@@ -39,7 +40,7 @@ public class FileReader {
         return contex;
     }
 
-    public String [] detectFilesName() {
+    public static String [] detectFilesName() {
 
         File file = new File("tests/");
         String [] filesName = file.list();
