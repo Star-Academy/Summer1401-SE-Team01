@@ -23,11 +23,11 @@ public class Input {
     public static SplitedInput split(String [] words) {
         for(String word: words) {
             if(word.startsWith("+"))
-                splitedInput.includeOne.add(word.substring(1));
+                splitedInput.getIncludeOne().add(word.substring(1));
             else if(word.startsWith("-"))
-                splitedInput.excludeAll.add(word.substring(1));
+                splitedInput.getExcludeAll().add(word.substring(1));
             else
-                splitedInput.includeAll.add(word);
+                splitedInput.getIncludeAll().add(word);
         }
 
         return splitedInput;

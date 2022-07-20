@@ -6,10 +6,10 @@ import java.util.HashSet;
 public class SearchEngine {
     public static void run() {
         ArrayList<Doc> documents = FileReader.readFiles();
-        InvertedIndex invertedIndex = new InvertedIndex(documents);
+        InvertedIndex.addDocuments(documents);
         SplitedInput splitedInput = Input.prepareInput();
 
-        HashSet<Doc> answer = invertedIndex.get(splitedInput);
+        HashSet<Doc> answer = InvertedIndex.get(splitedInput);
 
         Output.print(answer);
     }

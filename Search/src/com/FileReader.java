@@ -29,7 +29,7 @@ public class FileReader {
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
-                contex += scanner.nextLine();
+                contex += " " + scanner.nextLine();
             }
         }
 

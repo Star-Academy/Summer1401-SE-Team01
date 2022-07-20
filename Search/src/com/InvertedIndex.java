@@ -7,18 +7,11 @@ import java.util.HashSet;
 public class InvertedIndex {
     private static HashMap<String, HashSet<Doc>> invertedIndex = new HashMap<>();
     private static ArrayList<Doc> documents = new ArrayList<>();
-    private static HashSet<Doc> selectedFiles = new HashSet<>();
 
-    public InvertedIndex(ArrayList<Doc> documents) {
-        addDocuments(documents);
-        fillInvertedIndex();
-    }
 
-    private static void addDocuments(ArrayList<Doc> documents_) {
-        documents = documents_;
-    }
+    public static void addDocuments(ArrayList<Doc> documents) {
+        InvertedIndex.documents.addAll(documents);
 
-    private static void fillInvertedIndex() {
         for(Doc document : documents) {
             for (String word : document.getWords()) {
                 if (invertedIndex.get(word) == null) invertedIndex.put(word, new HashSet<>());
@@ -33,7 +26,7 @@ public class InvertedIndex {
         return answer;
     }
 
-    public static HashSet<Doc> findIncludeOne(ArrayList<String> includeOne) {
+    public static HashSet<Doc> findIncludeOne(ArrayList<String> includeOne, HashSet<Doc> selectedFiles) {
         if(includeOne.isEmpty())
             selectedFiles = new HashSet<Doc>(documents);
         else {
@@ -45,7 +38,7 @@ public class InvertedIndex {
         return selectedFiles;
     }
 
-    public static HashSet<Doc> findIncludeAll(ArrayList<String> includeAll) {
+    public static HashSet<Doc> findIncludeAll(ArrayList<String> includeAll, HashSet<Doc> selectedFiles) {
         for (String word : includeAll) {
             selectedFiles.retainAll(InvertedIndex.get(word));
         }
@@ -53,7 +46,7 @@ public class InvertedIndex {
         return selectedFiles;
     }
 
-    public static HashSet<Doc> findexcludeAll(ArrayList<String> excludeAll) {
+    public static HashSet<Doc> findExcludeAll(ArrayList<String> excludeAll, HashSet<Doc> selectedFiles) {
         for (String word : excludeAll) {
             selectedFiles.removeAll(InvertedIndex.get(word));
         }
@@ -63,12 +56,12 @@ public class InvertedIndex {
 
 
     public static HashSet<Doc> get(SplitedInput splitedInput) {
-        HashSet<Doc> answer = new HashSet<>();
+        HashSet<Doc> selectedFile = new HashSet<>();
 
-        findIncludeOne(splitedInput.includeOne);
-        findIncludeAll(splitedInput.includeAll);
-        findexcludeAll(splitedInput.excludeAll);
+        findIncludeOne(splitedInput.getIncludeOne(), selectedFile);
+        findIncludeAll(splitedInput.getIncludeAll(), selectedFile);
+        findExcludeAll(splitedInput.getExcludeAll(), selectedFile);
 
-        return selectedFiles;
+        return selectedFile;
     }
 }

@@ -34,13 +34,8 @@ public class Doc {
         return tokenz;
     }
 
-    private String deletePunctuationMarks(String string) { /////////
-        string = string.replace(".", "");
-        string = string.replace("?", "");
-        string = string.replace("!", "");
-        string = string.replace(",", "");
-        string = string.replace("\"", "");
-        string = string.replace("\'", "");
+    private String deletePunctuationMarks(String string) {
+        string.replaceAll("[./?!,:\'\"]", "");
 
         return string;
     }
