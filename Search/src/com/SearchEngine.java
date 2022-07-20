@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class SearchEngine {
-    public static void run() {
-        ArrayList<Doc> documents = FileReader.readFiles();
+    public static void run(ArrayList<Doc> documents, SplitedInput splitedInput) {
         InvertedIndex.addDocuments(documents);
-        SplitedInput splitedInput = Input.prepareInput();
 
         HashSet<Doc> answer = InvertedIndex.get(splitedInput);
 

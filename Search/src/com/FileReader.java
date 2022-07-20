@@ -14,22 +14,22 @@ public class FileReader {
 
         for (int i = 0; i < filesName.length; i++) {
                 File file = new File("tests/" + filesName[i]);
-                String contex = getFileContex(file);
+                String context = getFileContext(file);
 
-                documents.add(new Doc(filesName[i], contex));
+                documents.add(new Doc(filesName[i], context));
         }
 
         return documents;
     }
 
-    public static String getFileContex (File file) {
-        String contex = "";
+    public static String getFileContext (File file) {
+        String context = "";
 
         try {
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
-                contex += " " + scanner.nextLine();
+                context += " " + scanner.nextLine();
             }
         }
 
@@ -37,7 +37,7 @@ public class FileReader {
             exception.printStackTrace();
         }
 
-        return contex;
+        return context;
     }
 
     public static String [] detectFilesName() {

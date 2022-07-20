@@ -9,8 +9,8 @@ public class Doc {
     private ArrayList<String> words;
 
 
-    public Doc (String documentName_, String contex) {
-        documentName = documentName_;
+    public Doc (String documentName, String contex) {
+        this.documentName = documentName;
         contex = deletePunctuationMarks(contex).toUpperCase();
         words = tokenizeString(contex);
     }
@@ -35,7 +35,7 @@ public class Doc {
     }
 
     private String deletePunctuationMarks(String string) {
-        string.replaceAll("[./?!,:\'\"]", "");
+        string = string.replaceAll("[./?!,:\'\"]", "");
 
         return string;
     }
