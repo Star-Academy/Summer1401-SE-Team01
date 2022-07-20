@@ -7,16 +7,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
+    private final static String FOLDER = "tests/";
     private static ArrayList<Doc> documents = new ArrayList<Doc>();
 
     public static ArrayList<Doc> readFiles() {
-        String [] filesName = detectFilesName();
+        String [] fileNames = detectFilesName();
 
-        for (int i = 0; i < filesName.length; i++) {
-                File file = new File("tests/" + filesName[i]);
+        for (int i = 0; i < fileNames.length; i++) {
+                File file = new File(FOLDER + fileNames[i]);
                 String context = getFileContext(file);
 
-                documents.add(new Doc(filesName[i], context));
+                documents.add(new Doc(fileNames[i], context));
         }
 
         return documents;
@@ -42,7 +43,7 @@ public class FileReader {
 
     public static String [] detectFilesName() {
 
-        File file = new File("tests/");
+        File file = new File(FOLDER);
         String [] filesName = file.list();
         return  filesName;
     }
