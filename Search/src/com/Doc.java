@@ -1,7 +1,6 @@
 package com;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.StringTokenizer;
 
 public class Doc {
@@ -39,4 +38,9 @@ public class Doc {
 
         return string;
     }
+
+//    @Override
+//    public String toString() {
+//        return documentName;
+//    }
 }

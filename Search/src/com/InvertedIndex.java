@@ -26,32 +26,26 @@ public class InvertedIndex {
         return answer;
     }
 
-    public static HashSet<Doc> findIncludeOne(ArrayList<String> includeOne, HashSet<Doc> selectedFiles) {
+    public static void findIncludeOne(ArrayList<String> includeOne, HashSet<Doc> selectedFiles) {
         if(includeOne.isEmpty())
-            selectedFiles = new HashSet<Doc>(documents);
+            selectedFiles.addAll(documents);
         else {
             for(String word : includeOne) {
                 selectedFiles.addAll(get(word));
             }
         }
-
-        return selectedFiles;
     }
 
-    public static HashSet<Doc> findIncludeAll(ArrayList<String> includeAll, HashSet<Doc> selectedFiles) {
+    public static void findIncludeAll(ArrayList<String> includeAll, HashSet<Doc> selectedFiles) {
         for (String word : includeAll) {
             selectedFiles.retainAll(InvertedIndex.get(word));
         }
-
-        return selectedFiles;
     }
 
-    public static HashSet<Doc> findExcludeAll(ArrayList<String> excludeAll, HashSet<Doc> selectedFiles) {
+    public static void findExcludeAll(ArrayList<String> excludeAll, HashSet<Doc> selectedFiles) {
         for (String word : excludeAll) {
             selectedFiles.removeAll(InvertedIndex.get(word));
         }
-
-        return selectedFiles;
     }
 
 
