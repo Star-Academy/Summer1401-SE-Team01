@@ -38,9 +38,4 @@ public class Doc {
 
         return string;
     }
-
-//    @Override
-//    public String toString() {
-//        return documentName;
-//    }
 }

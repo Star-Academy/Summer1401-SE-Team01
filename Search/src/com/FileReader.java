@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 public class FileReader {
     private final static String FOLDER = "tests/";
-    private static ArrayList<Doc> documents = new ArrayList<Doc>();
 
     public static ArrayList<Doc> readFiles() {
-        String [] fileNames = detectFilesName();
+        ArrayList<Doc> documents = new ArrayList<>();
+        String [] fileNames = detectFileNames();
 
         for (int i = 0; i < fileNames.length; i++) {
                 File file = new File(FOLDER + fileNames[i]);
@@ -41,10 +41,10 @@ public class FileReader {
         return context;
     }
 
-    public static String [] detectFilesName() {
+    public static String [] detectFileNames() {
 
         File file = new File(FOLDER);
-        String [] filesName = file.list();
-        return  filesName;
+        String [] fileNames = file.list();
+        return  fileNames;
     }
 }
