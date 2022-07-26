@@ -11,6 +11,6 @@ public class Student
         StudentNumber = studentNumber;
         FirstName = firstName;
         LastName = lastName;
-        grades = new List<>();
+        grades = new List<Grade>();
     }
 }
