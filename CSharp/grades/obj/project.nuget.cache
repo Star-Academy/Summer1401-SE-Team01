@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i8QMMIWbtyN5LWOEYqss8s1xXBODLU1VTRF3VZ/D8xm5A+PigeAi8FuI6RtoY1VeELx8bASsPB22jKH7TJ9knA==",
+  "dgSpecHash": "+1mqI5B+izjqPlhH3UmKFiLwOkXjLBmZ59T2g+Jexwn6QhP3vm4Z4/MIzUD5e+nHsJBEdBKDtTAXpd4YAQK57Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\grades.csproj",
+  "projectFilePath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/grades.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ali\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\Ali\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Ali\\.nuget\\packages\\system.text.json\\6.0.5\\system.text.json.6.0.5.nupkg.sha512"
+    "/home/seyyed/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/seyyed/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/home/seyyed/.nuget/packages/system.text.json/6.0.5/system.text.json.6.0.5.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,17 @@
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.csproj.AssemblyReference.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.GeneratedMSBuildEditorConfig.editorconfig
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.AssemblyInfoInputs.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.AssemblyInfo.cs
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.csproj.CoreCompileInputs.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/grades
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/grades.deps.json
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/grades.runtimeconfig.json
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/grades.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/grades.pdb
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/bin/Debug/net6.0/System.Text.Json.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.csproj.CopyComplete
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/refint/grades.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.pdb
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/grades.genruntimeconfig.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/Debug/net6.0/ref/grades.dll

@@ -6,7 +6,7 @@ public class GradeAssigner
     {
         foreach (var grade in grades)
         {
-            students[grade.StudentNumber].grades.Add(grade);
+            students[grade.StudentNumber].Grades.Add(grade);
         }
     }
 }
