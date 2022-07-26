@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/grades.csproj": {}
+    "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\grades.csproj": {}
   },
   "projects": {
-    "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/grades.csproj": {
+    "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\grades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/grades.csproj",
+        "projectUniqueName": "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\grades.csproj",
         "projectName": "grades",
-        "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/grades.csproj",
-        "packagesPath": "/home/seyyed/.nuget/packages/",
-        "outputPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/CSharp/grades/obj/",
+        "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\grades.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\CSharp\\grades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/seyyed/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[6.0.5, )"
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

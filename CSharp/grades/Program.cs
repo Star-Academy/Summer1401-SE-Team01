@@ -1,6 +1,17 @@
-﻿using grades;
+﻿namespace grades;
+using System.IO;
+public class Program
+{
+    
+    static void Main(string [] args)
+    {
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        Student [] students = jsonDeserializer.DeserializeToStudent(File.ReadAllText("students.json"));
+        Grade [] grades = jsonDeserializer.DeserializeToGrade(File.ReadAllText("grades.json"));
 
-// See https://aka.ms/new-console-template for more information
-Student student = new Student(1, "Seyyed", "Hosseini");
-student.Grades.Add(new Grade(1, "AP", 10));
-Console.WriteLine(student);
+        var studentDictionary = new StudentDictionaryMaker().MakeDictionary(students);
+        new GradeAssigner().AssignGrades(grades, studentDictionary);
+
+        Console.WriteLine(new TopThreeQueryPrinter().Calculate(students));
+    }
+}
