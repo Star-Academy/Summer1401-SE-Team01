@@ -7,29 +7,30 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
-    private static ArrayList<Doc> documents = new ArrayList<Doc>();
+    private final static String FOLDER = "tests/";
 
     public static ArrayList<Doc> readFiles() {
-        String [] filesName = detectFilesName();
+        ArrayList<Doc> documents = new ArrayList<>();
+        String [] fileNames = detectFileNames();
 
-        for (int i = 0; i < filesName.length; i++) {
-                File file = new File("tests/" + filesName[i]);
-                String contex = getFileContex(file);
+        for (int i = 0; i < fileNames.length; i++) {
+                File file = new File(FOLDER + fileNames[i]);
+                String context = getFileContext(file);
 
-                documents.add(new Doc(filesName[i], contex));
+                documents.add(new Doc(fileNames[i], context));
         }
 
         return documents;
     }
 
-    public static String getFileContex (File file) {
-        String contex = "";
+    public static String getFileContext (File file) {
+        String context = "";
 
         try {
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
-                contex += " " + scanner.nextLine();
+                context += " " + scanner.nextLine();
             }
         }
 
@@ -37,13 +38,13 @@ public class FileReader {
             exception.printStackTrace();
         }
 
-        return contex;
+        return context;
     }
 
-    public static String [] detectFilesName() {
+    public static String [] detectFileNames() {
 
-        File file = new File("tests/");
-        String [] filesName = file.list();
-        return  filesName;
+        File file = new File(FOLDER);
+        String [] fileNames = file.list();
+        return  fileNames;
     }
 }

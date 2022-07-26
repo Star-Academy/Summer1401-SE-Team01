@@ -1,7 +1,6 @@
 package com;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.StringTokenizer;
 
 public class Doc {
@@ -9,8 +8,8 @@ public class Doc {
     private ArrayList<String> words;
 
 
-    public Doc (String documentName_, String contex) {
-        documentName = documentName_;
+    public Doc (String documentName, String contex) {
+        this.documentName = documentName;
         contex = deletePunctuationMarks(contex).toUpperCase();
         words = tokenizeString(contex);
     }
