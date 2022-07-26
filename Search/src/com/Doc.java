@@ -35,7 +35,7 @@ public class Doc {
     }
 
     private String deletePunctuationMarks(String string) {
-        string.replaceAll("[./?!,:\'\"]", "");
+        string = string.replaceAll("[./?!,:\'\"]", "");
 
         return string;
     }
