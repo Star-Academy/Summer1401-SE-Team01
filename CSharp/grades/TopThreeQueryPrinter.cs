@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace grades;
 
-public class TopThreeQueryPrinter : IQueryPrinter
+public class PrintTopStudents
 {
-    public string Calculate(Student[] students) 
+    public string Calculate(Student[] students, int numberOfStudentToPrint) 
     {
-        var newStudents = students.OrderByDescending(x => x.Grades.Select(y => y.Score).Average()).Take(3);
+        var newStudents = students.OrderByDescending(x => x.Grades.Select(y => y.Score).Average()).Take(numberOfStudentToPrint);
 
         StringBuilder answer = new StringBuilder("");
         foreach (var student in newStudents)
         {
-            answer.Append(student.ToString() + "\n");
+            answer.Append(student.ToString());
         }
 
         return answer.ToString();

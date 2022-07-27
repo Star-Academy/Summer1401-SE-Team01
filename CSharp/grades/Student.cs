@@ -17,6 +17,6 @@ public class Student
 
     public override string ToString()
     {
-        return FirstName + " " + LastName + " " + Grades.Select(x => x.Score).Average();
+        return $"{FirstName} {LastName} : {Grades.Select(x => x.Score).Average()} \n";
     }
 }
