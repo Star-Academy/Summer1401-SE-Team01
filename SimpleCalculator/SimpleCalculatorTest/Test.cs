@@ -20,6 +20,20 @@ public class Test
 
         Assert.True(expected == answer);
     }
+    
+    [Theory]
+    [InlineData(2, 3)]
+    [InlineData(5, 6)]
+    [InlineData(13, 6)]
+    public void Calculate_Sub_SumOfTwoNumbers(int firstOperand, int secondOperand)
+    {
+        int expected = firstOperand - secondOperand;
+        Calculator calculator = new Calculator();
+
+        int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.sub);
+
+        Assert.True(expected == answer);
+    }
 
     [Theory]
     [InlineData(0, 1000)]
