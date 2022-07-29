@@ -69,15 +69,10 @@ public class Test
         int firstOperand = 12;
         int secondOperand = 0;
         Calculator calculator = new Calculator();
+        int answer;
 
-        try
-        {
-            int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.division);
-            Assert.True(false);
-        }
-        catch
-        {
-            Assert.True(true);
-        }
+        Action act = () => answer = firstOperand / secondOperand;
+
+        Assert.Throws<DivideByZeroException>(act);
     }
 }
