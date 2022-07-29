@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace grades;
 
-public class PrintTopStudents
+public class TopStudents
 {
     public string Calculate(Student[] students, int numberOfStudentToPrint) 
     {
