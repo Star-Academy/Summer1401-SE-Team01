@@ -17,21 +17,20 @@ public class Test
 
         int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.sum);
 
-        Assert.True(expected == answer);
+        Assert.Equal(expected, answer);
     }
     
     [Theory]
-    [InlineData(2, 3)]
-    [InlineData(5, 6)]
-    [InlineData(13, 6)]
-    public void Calculate_Sub_SumOfTwoNumbers(int firstOperand, int secondOperand)
+    [InlineData(2, 3, -1)]
+    [InlineData(5, 6, -1)]
+    [InlineData(13, 6, 7)]
+    public void Calculate_Sub_SubOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        int expected = firstOperand - secondOperand;
         Calculator calculator = new Calculator();
 
         int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.sub);
 
-        Assert.True(expected == answer);
+        Assert.Equal(expected, answer);
     }
 
     [Theory]
@@ -46,7 +45,7 @@ public class Test
 
         int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.multiply);
 
-        Assert.True(expected == answer);
+        Assert.Equal(expected, answer);
     }
 
     [Theory]
@@ -61,7 +60,7 @@ public class Test
 
         int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.division);
 
-        Assert.True(expected == answer);
+        Assert.Equal(expected, answer);
     }
 
     [Fact]
