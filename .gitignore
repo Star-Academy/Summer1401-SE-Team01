@@ -1,6 +1,6 @@
-/Search/out/
+*/out/
 /CSharp/grades/bin/
 /CSharp/grades/obj/
-/CSharp/.vscode/
-/SimpleCalculator/.vscode/
+*/.vscode/
+*/.idea/
 
