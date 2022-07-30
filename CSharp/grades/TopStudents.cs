@@ -10,7 +10,7 @@ public class TopStudents
     {
         var newStudents = students.OrderByDescending(x => x.Grades.Select(y => y.Score).Average()).Take(numberOfStudentToPrint);
 
-        StringBuilder answer = new StringBuilder("");
+        StringBuilder answer = new StringBuilder();
         foreach (var student in newStudents)
         {
             answer.Append(student.ToString());
