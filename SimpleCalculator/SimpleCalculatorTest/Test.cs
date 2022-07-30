@@ -46,6 +46,16 @@ public class Test
         Assert.IsType<SubOperator>(returnedOperator);
     }
 
+    [Fact]
+    public void GetOperator_NullEnum_ThrowsNotSupportedException() {
+        IOperatorProvider operatorProvider = new OperatorProvider();
+        IOperator returnedOperator;
+
+        Action act = () => returnedOperator = operatorProvider.GetOperator((OperatorEnum)(-1));
+
+        Assert.Throws<NotSupportedException>(act);
+    }
+
     [Theory]
     [InlineData(2, 3, 5)]
     [InlineData(5, 6, 11)]
