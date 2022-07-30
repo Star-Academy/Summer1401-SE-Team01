@@ -3,6 +3,7 @@ using SimpleCalculator.Business.OperatorBusiness;
 using SimpleCalculator.Business.OperatorBusiness.Operators;
 using SimpleCalculator.Business.Abstraction;
 using SimpleCalculator.Business.Enums;
+using NSubstitute;
 
 namespace SimpleCalculatorTest;
 
@@ -111,5 +112,23 @@ public class Test
         Action act = () => answer = divisionOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Throws<DivideByZeroException>(act);
+    }
+
+    [Theory]
+    [InlineData(2, 5, OperatorEnum.sum, 7)]
+    [InlineData(2, 5, OperatorEnum.sub, -3)]
+    [InlineData(2, 5, OperatorEnum.division, 0)]
+    [InlineData(2, 5, OperatorEnum.multiply, 10)]
+    public void Calculator_Calculate_Sum_SumOfTwoNumbers(int firstOperand, int secondOperand, OperatorEnum operatorType, int expected) {
+        IOperatorProvider provider = Substitute.For<IOperatorProvider>();
+        provider.GetOperator(OperatorEnum.sum).Returns(new SumOperator());
+        provider.GetOperator(OperatorEnum.sub).Returns(new SubOperator());
+        provider.GetOperator(OperatorEnum.division).Returns(new DivisionOperator());
+        provider.GetOperator(OperatorEnum.multiply).Returns(new MultiplyOperator());
+        Calculator calculator = new Calculator(provider);
+
+        int answer = calculator.Calculate(firstOperand, secondOperand, operatorType);
+
+        Assert.Equal(answer, expected);
     }
 }
