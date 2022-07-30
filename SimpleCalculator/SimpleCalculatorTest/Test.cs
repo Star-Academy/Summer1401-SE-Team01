@@ -1,21 +1,59 @@
-using System.Reflection;
 using SimpleCalculator.Business;
+using SimpleCalculator.Business.OperatorBusiness;
+using SimpleCalculator.Business.OperatorBusiness.Operators;
+using SimpleCalculator.Business.Abstraction;
 using SimpleCalculator.Business.Enums;
-using System;
 
 namespace SimpleCalculatorTest;
 
 public class Test
 {
+    [Fact]
+    public void GetOperator_DivisionEnum_DivisionOperator() {
+        IOperatorProvider operatorProvider = new OperatorProvider();
+
+        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.division);
+
+        Assert.IsType<DivisionOperator>(returnedOperator);
+    }
+
+    [Fact]
+    public void GetOperator_MultiplyEnum_MultiplyOperator() {
+        IOperatorProvider operatorProvider = new OperatorProvider();
+
+        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.multiply);
+
+        Assert.IsType<MultiplyOperator>(returnedOperator);
+    }
+
+    [Fact]
+    public void GetOperator_SumEnum_SumOperator() {
+        IOperatorProvider operatorProvider = new OperatorProvider();
+
+        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.sum);
+
+        Assert.IsType<SumOperator>(returnedOperator);
+    }
+
+
+    [Fact]
+    public void GetOperator_SubEnum_SubOperator() {
+        IOperatorProvider operatorProvider = new OperatorProvider();
+
+        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.sub);
+
+        Assert.IsType<SubOperator>(returnedOperator);
+    }
+
     [Theory]
     [InlineData(2, 3, 5)]
     [InlineData(5, 6, 11)]
     [InlineData(13, 6, 19)]
     public void Calculate_Sum_SumOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        Calculator calculator = new Calculator();
+        SumOperator sumOperator = new SumOperator();
 
-        int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.sum);
+        int answer = sumOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Equal(expected, answer);
     }
@@ -26,9 +64,9 @@ public class Test
     [InlineData(13, 6, 7)]
     public void Calculate_Sub_SubOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        Calculator calculator = new Calculator();
-
-        int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.sub);
+        SubOperator subOperator = new SubOperator();
+        
+        int answer = subOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Equal(expected, answer);
     }
@@ -41,9 +79,9 @@ public class Test
     [InlineData(13, 6, 13*6)]
     public void Calculate_Multiply_MultiplyOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        Calculator calculator = new Calculator();
-
-        int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.multiply);
+        MultiplyOperator multiplyOperator = new MultiplyOperator();
+        
+        int answer = multiplyOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Equal(expected, answer);
     }
@@ -56,9 +94,9 @@ public class Test
     [InlineData(13, 6, 2)]
     public void Calculate_Division_DivisionOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        Calculator calculator = new Calculator();
-
-        int answer = calculator.Calculate(firstOperand, secondOperand, OperatorEnum.division);
+        DivisionOperator divisionOperator = new DivisionOperator();
+        
+        int answer = divisionOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Equal(expected, answer);
     }
@@ -67,10 +105,10 @@ public class Test
     public void Calculate_DivisionByZero_Exception() {
         int firstOperand = 12;
         int secondOperand = 0;
-        Calculator calculator = new Calculator();
+        DivisionOperator divisionOperator = new DivisionOperator();
         int answer;
 
-        Action act = () => answer = firstOperand / secondOperand;
+        Action act = () => answer = divisionOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Throws<DivideByZeroException>(act);
     }
