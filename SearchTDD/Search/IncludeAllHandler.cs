@@ -6,6 +6,6 @@ public class IncludeAllHandler : ISearchHandler
 
     public IEnumerable<string> Handle(InvertedIndex invertedIndex)
     {
-        
+        return null;
     }
 }

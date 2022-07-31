@@ -5,7 +5,9 @@ public class ISearchHandlerTest
     private readonly ISearchHandler _searchHandler;
     public ISearchHandlerTest()
     {
-        _searchHandler = new
+        InvertedIndex invertedIndex = new InvertedIndex();
+        
+        // _searchHandler = new IncludeOneHandler();
     }
     
     [Fact]
