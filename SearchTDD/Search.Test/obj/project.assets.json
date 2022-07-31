@@ -5993,34 +5993,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali\\.nuget\\packages\\": {}
+    "/home/seyyed/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\Search.Test.csproj",
+      "projectUniqueName": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/Search.Test.csproj",
       "projectName": "Search.Test",
-      "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\Search.Test.csproj",
-      "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\obj\\",
+      "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/Search.Test.csproj",
+      "packagesPath": "/home/seyyed/.nuget/packages/",
+      "outputPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/seyyed/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search\\Search.csproj": {
-              "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search\\Search.csproj"
+            "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/Search.csproj": {
+              "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/Search.csproj"
             }
           }
         }
@@ -6071,7 +6069,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }

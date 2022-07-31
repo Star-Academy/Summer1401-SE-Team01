@@ -1,14 +1,18 @@
 using Search;
+using Xunit.Abstractions;
+
 namespace Search.Test;
 
 public class FileProviderTest
 {
+    private readonly ITestOutputHelper _testOutputHelper;
     private FileProvider _fileProvider;
 
     private static (string name, string content) expected = new("1", "This is a Text document !");
 
-    public FileProviderTest()
+    public FileProviderTest(ITestOutputHelper testOutputHelper)
     {
+        _testOutputHelper = testOutputHelper;
         _fileProvider = new FileProvider();
     }
     
@@ -42,13 +46,22 @@ public class FileProviderTest
         Assert.Equal(3,result.Count());
     }
 
-    [Theory]
-    [InlineData(expected)]
-    [InlineData(new ("2", "Hello What a great day it is"))]
-    [InlineData(new ("3", "Please put this into the microwave oven thank you"))]
-    public void GetData_TestFilesFolder_ContainsFiles((string name, string context) expected)
+    [Fact]
+    public void GetData_TestFilesFolder_ContainsFiles()
     {
         var result = _fileProvider.GetData("TestFiles");
-        
+        _testOutputHelper.WriteLine(result.ToString());
+        (string name, string content)[] expects = new (string name, string content)[]
+        {
+            new("1", "This is a Text document !"),
+            new("2", "Hello What a great day it is"),
+            new("3", "Please put this into the microwave oven thank you")
+        };
+
+        foreach (var expected in expects)
+        {
+            Assert.Contains(expected, result);
+        }
+
     }
 }

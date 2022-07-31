@@ -4,14 +4,13 @@ public class FileProvider : IDataProvider
 {
     public IEnumerable<(string name, string content)> GetData(string path)
     {
-        if(Directory.GetFiles(path).Length == 0)
-            return new (string name, string content)[0];
-        else
+        string[] paths = Directory.GetFiles(path);
+        List<(string name, string content)> files = new List<(string name, string content)>();
+        foreach (var filePath in paths)
         {
-            return new (string name, string content)[]
-            {
-                ("1", "This is a Text document !")
-            };
+            files.Add(new(new FileInfo(filePath).Name, File.ReadAllText(filePath)));
         }
+
+        return files;
     }
 }
