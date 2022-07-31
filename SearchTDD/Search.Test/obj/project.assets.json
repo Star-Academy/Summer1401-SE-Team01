@@ -1670,6 +1670,16 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Search/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Search.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Search.dll": {}
+        }
       }
     }
   },
@@ -5966,41 +5976,53 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Search/1.0.0": {
+      "type": "project",
+      "path": "../Search/Search.csproj",
+      "msbuildProject": "../Search/Search.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.NET.Test.Sdk >= 17.1.0",
+      "Search >= 1.0.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
     ]
   },
   "packageFolders": {
-    "/home/seyyed/.nuget/packages/": {}
+    "C:\\Users\\Ali\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/Search.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\Search.Test.csproj",
       "projectName": "Search.Test",
-      "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/Search.Test.csproj",
-      "packagesPath": "/home/seyyed/.nuget/packages/",
-      "outputPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search.Test/obj/",
+      "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\Search.Test.csproj",
+      "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/seyyed/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search\\Search.csproj": {
+              "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\Search\\Search.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6049,7 +6071,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
