@@ -2,5 +2,5 @@ namespace Search;
 
 public interface IDataProvider
 {
-    IEnumerable<(string name, string content)> GetData(string path);
+    public IEnumerable<(string name, string content)> GetData(string path);
 }
