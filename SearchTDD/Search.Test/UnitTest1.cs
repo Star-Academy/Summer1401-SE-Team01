@@ -3,7 +3,7 @@ using Xunit.Abstractions;
 
 namespace Search.Test;
 
-public class FileProviderTest
+public class FileProviderTest: IDisposable
 {
     private readonly ITestOutputHelper _testOutputHelper;
     private FileProvider _fileProvider;
@@ -14,8 +14,25 @@ public class FileProviderTest
     {
         _testOutputHelper = testOutputHelper;
         _fileProvider = new FileProvider();
+
+        Directory.CreateDirectory("EmptyTestFolder");
+        
+        Directory.CreateDirectory("OneTestFile");
+        File.WriteAllText(@"OneTestFile/1", "This is a Text document !");
+
+        Directory.CreateDirectory("TestFiles");
+        File.WriteAllText(@"TestFiles/1", "This is a Text document !");
+        File.WriteAllText(@"TestFiles/2", "Hello What a great day it is");
+        File.WriteAllText(@"TestFiles/3", "Please put this into the microwave oven thank you");
     }
-    
+
+    public void Dispose()
+    {
+        Directory.Delete("EmptyTestFolder", true);
+        Directory.Delete("OneTestFile", true);
+        Directory.Delete("TestFiles", true);
+    }
+
     [Fact]
     public void GetData_EmptyTestFolder_EmptyIEnumerable()
     {
