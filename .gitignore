@@ -3,4 +3,6 @@
 /CSharp/grades/obj/
 /CSharp/.vscode/
 /SimpleCalculator/.vscode/
-
+*/.vscode/
+*/bin/
+*/obj/
