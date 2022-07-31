@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SearchTDD.Test
-build_property.ProjectDir = C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\SearchTDD.Test\
+build_property.ProjectDir = /home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/

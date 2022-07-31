@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD.Test\\SearchTDD.Test.csproj": {}
+    "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/SearchTDD.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD.Test\\SearchTDD.Test.csproj": {
+    "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/SearchTDD.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD.Test\\SearchTDD.Test.csproj",
+        "projectUniqueName": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/SearchTDD.Test.csproj",
         "projectName": "SearchTDD.Test",
-        "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD.Test\\SearchTDD.Test.csproj",
-        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD.Test\\obj\\",
+        "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/SearchTDD.Test.csproj",
+        "packagesPath": "/home/seyyed/.nuget/packages/",
+        "outputPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD.Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/seyyed/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\SearchTDD.csproj": {
-                "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\SearchTDD.csproj"
+              "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/SearchTDD.csproj": {
+                "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/SearchTDD.csproj"
               }
             }
           }
@@ -88,28 +86,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\SearchTDD.csproj": {
+    "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/SearchTDD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\SearchTDD.csproj",
+        "projectUniqueName": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/SearchTDD.csproj",
         "projectName": "SearchTDD",
-        "projectPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\SearchTDD.csproj",
-        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali\\Summer1401-SE-Team01\\SearchTDD\\SearchTDD\\obj\\",
+        "projectPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/SearchTDD.csproj",
+        "packagesPath": "/home/seyyed/.nuget/packages/",
+        "outputPath": "/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/SearchTDD/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/seyyed/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
         }
       }
     }
