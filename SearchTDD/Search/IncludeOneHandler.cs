@@ -18,7 +18,14 @@ public class IncludeOneHandler : ISearchHandler
         IEnumerable<string> answer = new List<string>();
         foreach (var includeOneQuery in includeOneQueries)
         {
-            answer = answer.Union(invertedIndex.Database[includeOneQuery.Substring(1).ToUpper()]);
+            try
+            {
+                answer = answer.Union(invertedIndex.Database[includeOneQuery.Substring(1).ToUpper()]);
+            }
+            catch
+            {
+                ;
+            }
         }
 
         if (Next != null) answer = answer.Intersect(Next.Handle(invertedIndex, query));
