@@ -1,4 +1,4 @@
-name: build_pipeline
+name: .NET
 on:
   push:
     branches: ["TDD"]
@@ -15,10 +15,10 @@ jobs:
         dotnet-version: 6.0.x
     - name: Install dependencies
       run: dotnet restore
-      working-directory: ./SearchTDD
+      working-directory: SearchTDD
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: ./SearchTDD
+      working-directory: SearchTDD
     - name: Test
       run: dotnet test --no-restore --verbosity normal --collect "XPlat Code Coverage"
-      working-directory: ./SearchTDD
+      working-directory: SearchTDD
