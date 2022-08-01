@@ -182,13 +182,11 @@ public class SearchHandlerTest
     {
         IEnumerable<string> answer = _includeAllHandler.Handle(_invertedIndex, _queryWithoutMinus);
         
-        Assert.Equal(3, answer.Count());
+        Assert.Single( answer);
     }
 
     [Theory]
     [InlineData("1")]
-    [InlineData("2")]
-    [InlineData("3")]
 
     public void Handle_IncludeAllHandlerQuery2_ContainsAllExpectations(string expected)
     {

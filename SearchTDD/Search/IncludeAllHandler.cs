@@ -24,7 +24,7 @@ public class IncludeAllHandler : ISearchHandler
             }
             catch (KeyNotFoundException e)
             {
-                ;
+                return new List<string>();
             }
         }
 

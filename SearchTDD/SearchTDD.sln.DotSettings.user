@@ -14,9 +14,9 @@
     &lt;TestId&gt;xUnit::1B9C2F49-D90F-4CF1-A10C-A0E5AA736915::net6.0::Search.Test.SearchEngineTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f393c510_002Da6c4_002D4706_002Da621_002D302fc8c45752/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ISearchHandlerTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::1B9C2F49-D90F-4CF1-A10C-A0E5AA736915::net6.0::Search.Test.ISearchHandlerTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f393c510_002Da6c4_002D4706_002Da621_002D302fc8c45752/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ISearchHandlerTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::1B9C2F49-D90F-4CF1-A10C-A0E5AA736915::net6.0::Search.Test.SearchHandlerTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 </wpf:ResourceDictionary>
