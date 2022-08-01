@@ -1,4 +1,4 @@
-namespace grades;
+namespace Grades;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 

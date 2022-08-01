@@ -1,4 +1,4 @@
-namespace grades;
+namespace Grades;
 
 public class Grade
 {

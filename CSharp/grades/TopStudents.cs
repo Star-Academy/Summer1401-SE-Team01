@@ -2,7 +2,7 @@
 using System.Text;
 using System.Linq;
 
-namespace grades;
+namespace Grades;
 
 public class TopStudents
 {
@@ -13,7 +13,7 @@ public class TopStudents
         StringBuilder answer = new StringBuilder();
         foreach (var student in newStudents)
         {
-            answer.Append(student.ToString());
+            answer.Append(student.ToString() + "\n");
         }
 
         return answer.ToString();
