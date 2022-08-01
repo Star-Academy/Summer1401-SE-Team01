@@ -1,0 +1,12 @@
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/bin/Debug/net6.0/Search.deps.json
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/bin/Debug/net6.0/Search.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/bin/Debug/net6.0/Search.pdb
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.csproj.AssemblyReference.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.GeneratedMSBuildEditorConfig.editorconfig
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.AssemblyInfoInputs.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.AssemblyInfo.cs
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.csproj.CoreCompileInputs.cache
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/refint/Search.dll
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/Search.pdb
+/home/seyyed/Desktop/codestar/Phase1/Summer1401-SE-Team01/SearchTDD/Search/obj/Debug/net6.0/ref/Search.dll

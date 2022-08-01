@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+	<PackageId>StarAcademy.CodeStar1401.Team01.Search</PackageId>
+	<Authors>"Team01"</Authors>
+	<Company>Star Academy</Company>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
