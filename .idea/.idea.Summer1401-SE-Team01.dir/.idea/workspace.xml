@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08937ea0-b7c1-47db-a8d9-e9da59b4df00" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SearchTDD/Search/Search.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SearchTDD/Search/Search.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/publishPipeline.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Summer1401-SE-Team01.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Summer1401-SE-Team01.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659248529289</updated>
       <workItem from="1659248556640" duration="135000" />
-      <workItem from="1659351256024" duration="190000" />
+      <workItem from="1659351256024" duration="1297000" />
     </task>
     <servers />
   </component>
@@ -50,6 +51,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
