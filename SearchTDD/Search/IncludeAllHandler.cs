@@ -18,7 +18,14 @@ public class IncludeAllHandler : ISearchHandler
         IEnumerable<string> answer = invertedIndex.AllNames;
         foreach (var includeAllQuery in includeAllQueries)
         {
-            answer = answer.Intersect(invertedIndex.Database[includeAllQuery.ToUpper()]);
+            try
+            {
+                answer = answer.Intersect(invertedIndex.Database[includeAllQuery.ToUpper()]);
+            }
+            catch (KeyNotFoundException e)
+            {
+                ;
+            }
         }
 
         if (Next != null)
