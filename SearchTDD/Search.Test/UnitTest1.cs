@@ -12,7 +12,12 @@ public class FileProviderTest: IDisposable
     {
         _testOutputHelper = testOutputHelper;
         _fileProvider = new FileProvider();
+        
+        CreateFiles();
+    }
 
+    private void CreateFiles()
+    {
         Directory.CreateDirectory("EmptyTestFolder");
         
         Directory.CreateDirectory("OneTestFile");

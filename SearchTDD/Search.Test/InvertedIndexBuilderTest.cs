@@ -9,7 +9,7 @@ public class InvertedIndexBuilderTest
     }
 
     [Fact]
-    public void Build_AddSomeFile_()
+    public void Build_AddSomeFile_TheInvertedIndexBuiltCorrectly()
     {
         (string name, string content)[] inputToBuilder = {
             new("1", "This is a Text document !"),

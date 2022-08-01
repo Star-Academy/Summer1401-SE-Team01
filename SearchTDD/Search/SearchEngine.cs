@@ -1,11 +1,10 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Search;
+﻿namespace Search;
 
 public class SearchEngine : ISearchEngine
 {
-    private InvertedIndex _invertedIndex;
-    private ISearchHandler _searchHandler;
+    private static readonly char[] DelimiterChars = new[] { ' ', ',', '!', '.', '?', ';', ':', '\'', '\"', '/', '\\' };
+    private readonly InvertedIndex _invertedIndex;
+    private readonly ISearchHandler _searchHandler;
 
     public SearchEngine(InvertedIndex invertedIndex, ISearchHandler searchHandler)
     {
@@ -16,8 +15,7 @@ public class SearchEngine : ISearchEngine
     
     public IEnumerable<string> Query(string query)
     {
-        char[] delimiterChars = new[] { ' ', ',', '!', '.', '?', ';', ':', '\'', '\"', '/', '\\' };
-        var splitedQuery = query.ToUpper().Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
-        return _searchHandler.Handle(_invertedIndex, splitedQuery);
+        var splitQuery = query.ToUpper().Split(DelimiterChars, StringSplitOptions.RemoveEmptyEntries);
+        return _searchHandler.Handle(_invertedIndex, splitQuery);
     }
 }
