@@ -18,7 +18,7 @@ public class InvertedIndex
         foreach (var word in words)
         {
             if (!Database.ContainsKey(word)) Database.Add(word, new List<string>());
-            Database[word].Append(name);
+            Database[word] = Database[word].Append(name);
         }
     }
 }

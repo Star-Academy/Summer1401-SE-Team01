@@ -1,24 +1,17 @@
-﻿using System.Collections.Generic;
-using Search;
-using Xunit.Abstractions;
-
-namespace Search.Test;
+﻿namespace Search.Test;
 
 public class InvertedIndexBuilderTest
 {
-    private readonly ITestOutputHelper _testOutputHelper;
     private readonly InvertedIndexBuilder _indexBuilder;
-    public InvertedIndexBuilderTest(ITestOutputHelper testOutputHelper)
+    public InvertedIndexBuilderTest()
     {
-        _testOutputHelper = testOutputHelper;
         _indexBuilder = new InvertedIndexBuilder();
     }
 
     [Fact]
     public void Build_AddSomeFile_()
     {
-        (string name, string content)[] inputToBuilder = new (string name, string content)[]
-        {
+        (string name, string content)[] inputToBuilder = {
             new("1", "This is a Text document !"),
             new("2", "Hello What a great day it is"),
             new("3", "Hello Please put this into the microwave")

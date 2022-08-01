@@ -2,7 +2,7 @@
 
 public class InvertedIndexBuilder : IInvertedIndexBuilder
 {
-    public InvertedIndex Build(IEnumerable<(string name, string content)>? list)
+    public InvertedIndex Build(IEnumerable<(string name, string content)> list)
     {
         InvertedIndex invertedIndex = new InvertedIndex();
         foreach (var file in list)

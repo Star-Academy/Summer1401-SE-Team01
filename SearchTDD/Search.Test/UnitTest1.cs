@@ -1,7 +1,4 @@
-using System;
-using System.IO;
 using System.Linq;
-using Search;
 using Xunit.Abstractions;
 
 namespace Search.Test;
@@ -9,9 +6,7 @@ namespace Search.Test;
 public class FileProviderTest: IDisposable
 {
     private readonly ITestOutputHelper _testOutputHelper;
-    private FileProvider _fileProvider;
-
-    private static (string name, string content) expected = new("1", "This is a Text document !");
+    private readonly FileProvider _fileProvider;
 
     public FileProviderTest(ITestOutputHelper testOutputHelper)
     {
@@ -40,14 +35,14 @@ public class FileProviderTest: IDisposable
     public void GetData_EmptyTestFolder_EmptyIEnumerable()
     {
         var result =_fileProvider.GetData("EmptyTestFolder");
-        Assert.Equal(0,result.Count());
+        Assert.Empty(result);
     }
 
     [Fact]
     public void GetData_OneFileTestFolder_SizeIsOne()
     {
         var result = _fileProvider.GetData("OneTestFile");
-        Assert.Equal(1 , result.Count());
+        Assert.Single(result);
     }
 
     [Fact]
