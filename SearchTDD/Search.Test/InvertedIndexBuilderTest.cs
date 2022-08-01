@@ -1,4 +1,5 @@
-﻿using Search;
+﻿using System.Collections.Generic;
+using Search;
 using Xunit.Abstractions;
 
 namespace Search.Test;

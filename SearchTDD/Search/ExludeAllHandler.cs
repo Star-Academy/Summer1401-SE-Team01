@@ -1,4 +1,7 @@
-﻿namespace Search;
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Search;
 
 public class ExcludeAllHandler : ISearchHandler
 {

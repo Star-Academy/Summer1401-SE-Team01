@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Linq;
 using Search;
 using Xunit.Abstractions;
 

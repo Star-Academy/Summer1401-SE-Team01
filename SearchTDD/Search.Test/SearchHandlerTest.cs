@@ -1,8 +1,10 @@
-﻿using Xunit.Abstractions;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Xunit.Abstractions;
 
 namespace Search.Test;
 
-public class ISearchHandlerTest
+public class SearchHandlerTest
 {
     private readonly ITestOutputHelper _testOutputHelper;
     private readonly InvertedIndex _invertedIndex = new InvertedIndex();
@@ -16,7 +18,7 @@ public class ISearchHandlerTest
     private readonly IEnumerable<string> query5 = new [] { "DocumeNT", "+text", "+A", "-GREAT", "-PLEasE" };
     private readonly IEnumerable<string> query6 = new [] { "-DocuMent", "+salam", "-Text", "+A"};
 
-    public ISearchHandlerTest(ITestOutputHelper testOutputHelper)
+    public SearchHandlerTest(ITestOutputHelper testOutputHelper)
     {
         _testOutputHelper = testOutputHelper;
         _invertedIndex.Database = new Dictionary<string, IEnumerable<string>>()

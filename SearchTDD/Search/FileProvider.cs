@@ -1,4 +1,7 @@
-﻿namespace Search;
+﻿using System.Collections.Generic;
+using System.IO;
+
+namespace Search;
 
 public class FileProvider : IDataProvider
 {
