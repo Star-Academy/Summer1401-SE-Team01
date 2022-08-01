@@ -42,6 +42,8 @@ public class ISearchHandlerTest
         invertedIndex.AllNames.Add("3");
         
         query1 = new[] { "DocumeNT", "-GREAT", "-PLEasE" };
+        query2 = new[] { "+THiS", "+iS", "-GREAT", "-PLEasE" };
+        query3 = new[] { "This", "IS", "+A", "-GREAT" };
         query4 = new[] { "DocumeNT", "+THiS", "+iS", "-GREAT", "-PLEasE" };
         query5 = new[] { "DocumeNT", "+text", "+A", "-GREAT", "-PLEasE" };
     }
@@ -104,5 +106,43 @@ public class ISearchHandlerTest
         Assert.Contains(expected, answer);
     }
 
+    /// //////////////////
+    
+    [Fact]
+    public void Handle_IncludeAllHandlerQuery3_SizeIsOne()
+    {
+        IEnumerable<string> answer = _includeAllHandler.Handle(invertedIndex, query3);
+        
+        Assert.Equal(1, answer.Count());
+    }
+    
+    [Theory]
+    [InlineData("1")]
+    public void Handle_IncludeAllHandlerQuery3_ContainsAllExpecteds(string expected)
+    {
+        IEnumerable<string> answer = _includeAllHandler.Handle(invertedIndex, query3);
+        
+        Assert.Contains(expected, answer);
+    }
+
+    [Fact]
+    public void Handle_IncludeAllHandlerQuery2_SizeIsThree()
+    {
+        IEnumerable<string> answer = _includeAllHandler.Handle(invertedIndex, query2);
+        
+        Assert.Equal(3, answer.Count());
+    }
+
+    [Theory]
+    [InlineData("1")]
+    [InlineData("2")]
+    [InlineData("3")]
+
+    public void Handle_IncludeAllHandlerQuery2_ContainsAllExpecteds(string expected)
+    {
+        IEnumerable<string> answer = _includeAllHandler.Handle(invertedIndex, query2);
+        
+        Assert.Contains(expected, answer);
+    }
 
 }
