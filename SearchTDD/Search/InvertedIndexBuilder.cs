@@ -7,17 +7,7 @@ public class InvertedIndexBuilder : IInvertedIndexBuilder
         InvertedIndex invertedIndex = new InvertedIndex();
         foreach (var file in list)
         {
-            foreach (var word in file.content.ToUpper().Split())
-            {
-                if (invertedIndex.Database.ContainsKey(word))
-                {
-                    invertedIndex.Database[word] = invertedIndex.Database[word].Append(file.name);
-                }
-                else
-                {
-                    invertedIndex.Database.Add(word, new List<string>(){file.name});
-                }
-            }
+            invertedIndex.Add(file.name, file.content.ToUpper().Split());
         }
 
         return invertedIndex;
