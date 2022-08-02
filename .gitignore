@@ -1,1 +1,6 @@
-/Search/out/
+*/out/
+/CSharp/grades/bin/
+/CSharp/grades/obj/
+*/.vscode/
+*/.idea/
+
