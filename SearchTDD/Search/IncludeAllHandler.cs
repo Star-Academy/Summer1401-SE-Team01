@@ -1,5 +1,4 @@
-﻿using System.Linq;
-namespace Search;
+﻿namespace Search;
 
 public class IncludeAllHandler : ISearchHandler
 {

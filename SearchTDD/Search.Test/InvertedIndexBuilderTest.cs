@@ -7,6 +7,28 @@ public class InvertedIndexBuilderTest
     {
         _indexBuilder = new InvertedIndexBuilder();
     }
+    
+    public static Dictionary<string, IEnumerable<string>> Data =>
+        new Dictionary<string, IEnumerable<string>>()
+        {
+            ["THIS"] = new[] { "1", "3" },
+            ["IS"] = new[] { "1", "2" },
+            ["A"] = new[] { "1", "2" },
+            ["TEXT"] = new[] { "1" },
+            ["DOCUMENT"] = new[] { "1" },
+            ["!"] = new[] { "1" },
+            ["HELLO"] = new[] { "2", "3" },
+            ["WHAT"] = new[] { "2" },
+            ["GREAT"] = new[] { "2" },
+            ["DAY"] = new[] { "2" },
+            ["IT"] = new[] { "2" },
+            ["PLEASE"] = new[] { "3" },
+            ["PUT"] = new[] { "3" },
+            ["INTO"] = new[] { "3" },
+            ["THE"] = new[] { "3" },
+            ["MICROWAVE"] = new[] { "3" },
+
+        };
 
     [Fact]
     public void Build_AddSomeFile_TheInvertedIndexBuiltCorrectly()

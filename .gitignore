@@ -1,11 +1,7 @@
-/Search/out/
-/SimpleCalculator/.vscode/
-*/.vscode/*
-*/bin/*
-/bin/*
-*/obj/*
-/obj/*
+out/
+.vscode/
+bin/
+obj/
 *.dll
 *.pdb
-*/.idea/*
-/.idea/*
+.idea/

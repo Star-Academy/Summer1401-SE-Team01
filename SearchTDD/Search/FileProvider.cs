@@ -2,10 +2,10 @@
 
 public class FileProvider : IDataProvider
 {
-    public IEnumerable<(string name, string content)> GetData(string path)
+    public IEnumerable<Document> GetData(string path)
     {
         string[] paths = Directory.GetFiles(path);
-        List<(string name, string content)> files = new List<(string name, string content)>();
+        List<Document> files = new List<Document>();
         foreach (var filePath in paths)
         {
             files.Add(new(new FileInfo(filePath).Name, File.ReadAllText(filePath)));

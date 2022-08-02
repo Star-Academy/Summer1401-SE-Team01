@@ -1,16 +1,13 @@
-using System.Linq;
 using Xunit.Abstractions;
 
 namespace Search.Test;
 
 public class FileProviderTest: IDisposable
 {
-    private readonly ITestOutputHelper _testOutputHelper;
     private readonly FileProvider _fileProvider;
 
-    public FileProviderTest(ITestOutputHelper testOutputHelper)
+    public FileProviderTest()
     {
-        _testOutputHelper = testOutputHelper;
         _fileProvider = new FileProvider();
         
         CreateFiles();
@@ -54,7 +51,7 @@ public class FileProviderTest: IDisposable
     public void GetData_OneTestFileFolder_ContainsTheFile()
     {
         var result = _fileProvider.GetData("OneTestFile");
-        (string name, string context) expected = new ("1", "This is a Text document !");
+        Document expected = new ("1", "This is a Text document !");
 
         Assert.Contains(expected, result);
     }
@@ -70,8 +67,7 @@ public class FileProviderTest: IDisposable
     public void GetData_TestFilesFolder_ContainsFiles()
     {
         var result = _fileProvider.GetData("TestFiles");
-        _testOutputHelper.WriteLine(result.ToString());
-        (string name, string content)[] expects = new (string name, string content)[]
+        var expects = new Document[]
         {
             new("1", "This is a Text document !"),
             new("2", "Hello What a great day it is"),
