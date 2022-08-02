@@ -123,7 +123,7 @@ public class Test
     [InlineData(2, 5, OperatorEnum.sub, -3)]
     [InlineData(2, 5, OperatorEnum.division, 0)]
     [InlineData(2, 5, OperatorEnum.multiply, 10)]
-    public void Calculator_Calculate_Sum_SumOfTwoNumbers(int firstOperand, int secondOperand, OperatorEnum operatorType, int expected) {
+    public void Calculator_Calculate_ExpectedCalculatorResult(int firstOperand, int secondOperand, OperatorEnum operatorType, int expected) {
         IOperatorProvider provider = Substitute.For<IOperatorProvider>();
         provider.GetOperator(OperatorEnum.sum).Returns(new SumOperator());
         provider.GetOperator(OperatorEnum.sub).Returns(new SubOperator());
