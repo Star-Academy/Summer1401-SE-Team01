@@ -1,0 +1,12 @@
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.csproj.AssemblyReference.cache
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.AssemblyInfoInputs.cache
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.AssemblyInfo.cs
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\bin\Debug\net6.0\Search.deps.json
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\bin\Debug\net6.0\Search.dll
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\bin\Debug\net6.0\Search.pdb
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.dll
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\refint\Search.dll
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\Search.pdb
+C:\Users\Ali\Summer1401-SE-Team01\SearchTDD\Search\obj\Debug\net6.0\ref\Search.dll

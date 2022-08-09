@@ -1,1 +1,10 @@
 /Search/out/
+/CSharp/grades/bin/
+/CSharp/grades/obj/
+/CSharp/.vscode/
+/SimpleCalculator/.vscode/
+*/.vscode/
+*/bin/
+*/obj/
+*.dll
+*.pdb
