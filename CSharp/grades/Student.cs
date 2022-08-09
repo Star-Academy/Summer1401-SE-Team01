@@ -1,5 +1,5 @@
 using System.Linq;
-namespace grades;
+namespace Grades;
 
 public class Student
 {
@@ -17,6 +17,6 @@ public class Student
 
     public override string ToString()
     {
-        return $"{FirstName} {LastName} : {Grades.Select(x => x.Score).Average()} \n";
+        return $"{FirstName} {LastName} : {Grades.Select(x => x.Score).Average()}";
     }
 }

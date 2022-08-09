@@ -1,19 +1,20 @@
-﻿namespace grades;
+﻿namespace Grades;
 using System.IO;
 public class Program
 {
     
     static void Main(string [] args)
     {
-        const int NUMBER_OF_STUDENT_TO_PRINT = 3;
+        const int NumberOfStudentsToPrint = 3;
+        const string StudentsFilePath = "students.json";
+        const string GradesFilePath = "grades.json";
 
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
-        Student [] students = jsonDeserializer.DeserializeToStudent(File.ReadAllText("students.json"));
-        Grade [] grades = jsonDeserializer.DeserializeToGrade(File.ReadAllText("grades.json"));
+        Student [] students = jsonDeserializer.Deserialize<Student[]>(File.ReadAllText(StudentsFilePath));
+        Grade [] grades = jsonDeserializer.Deserialize<Grade[]>(File.ReadAllText(GradesFilePath));
 
-        var studentDictionary = new StudentDictionaryMaker().MakeDictionary(students);
-        new GradeAssigner().AssignGrades(grades, studentDictionary);
+        var studentDictionary = new StudentDictionaryMaker().MakeDictionary(students, grades);
 
-        Console.WriteLine(new PrintTopStudents().Calculate(students, NUMBER_OF_STUDENT_TO_PRINT));
+        Console.WriteLine(new TopStudents().Calculate(students, NumberOfStudentsToPrint));
     }
 }
