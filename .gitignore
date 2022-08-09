@@ -1,6 +1,11 @@
 */out/
 /CSharp/grades/bin/
 /CSharp/grades/obj/
-*/.vscode/
 */.idea/
-
+/CSharp/.vscode/
+/SimpleCalculator/.vscode/
+*/.vscode/
+*/bin/
+*/obj/
+*.dll
+*.pdb

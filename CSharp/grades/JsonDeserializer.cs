@@ -1,16 +1,11 @@
-namespace grades;
+namespace Grades;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 public class JsonDeserializer : IDeserializer
 {
-    public Student[] DeserializeToStudent(string input)
+    public T Deserialize<T>(String input)
     {
-        return System.Text.Json.JsonSerializer.Deserialize<Student[]>(input);
-    }
-
-    public Grade[] DeserializeToGrade(string input) 
-    {
-        return System.Text.Json.JsonSerializer.Deserialize<Grade[]>(input);
+        return System.Text.Json.JsonSerializer.Deserialize<T>(input);
     }
 }
