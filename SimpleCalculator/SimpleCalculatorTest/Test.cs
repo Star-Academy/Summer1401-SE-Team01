@@ -9,29 +9,29 @@ namespace SimpleCalculatorTest;
 
 public class Test
 {
+    private OperatorProvider _operatorProvider;
+
+    public Test() {
+        _operatorProvider = new OperatorProvider();
+    }
+
     [Fact]
     public void GetOperator_DivisionEnum_DivisionOperator() {
-        IOperatorProvider operatorProvider = new OperatorProvider();
-
-        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.division);
+        var returnedOperator = _operatorProvider.GetOperator(OperatorEnum.division);
 
         Assert.IsType<DivisionOperator>(returnedOperator);
     }
 
     [Fact]
     public void GetOperator_MultiplyEnum_MultiplyOperator() {
-        IOperatorProvider operatorProvider = new OperatorProvider();
-
-        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.multiply);
+        var returnedOperator = _operatorProvider.GetOperator(OperatorEnum.multiply);
 
         Assert.IsType<MultiplyOperator>(returnedOperator);
     }
 
     [Fact]
     public void GetOperator_SumEnum_SumOperator() {
-        IOperatorProvider operatorProvider = new OperatorProvider();
-
-        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.sum);
+        var returnedOperator = _operatorProvider.GetOperator(OperatorEnum.sum);
 
         Assert.IsType<SumOperator>(returnedOperator);
     }
@@ -39,19 +39,14 @@ public class Test
 
     [Fact]
     public void GetOperator_SubEnum_SubOperator() {
-        IOperatorProvider operatorProvider = new OperatorProvider();
-
-        IOperator returnedOperator = operatorProvider.GetOperator(OperatorEnum.sub);
+        var returnedOperator = _operatorProvider.GetOperator(OperatorEnum.sub);
 
         Assert.IsType<SubOperator>(returnedOperator);
     }
 
     [Fact]
     public void GetOperator_NullEnum_ThrowsNotSupportedException() {
-        IOperatorProvider operatorProvider = new OperatorProvider();
-        IOperator returnedOperator;
-
-        Action act = () => returnedOperator = operatorProvider.GetOperator((OperatorEnum)(-1));
+        Action act = () => _operatorProvider.GetOperator((OperatorEnum)(-1));
 
         Assert.Throws<NotSupportedException>(act);
     }
@@ -62,7 +57,7 @@ public class Test
     [InlineData(13, 6, 19)]
     public void Calculate_Sum_SumOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        SumOperator sumOperator = new SumOperator();
+        var sumOperator = new SumOperator();
 
         int answer = sumOperator.Calculate(firstOperand, secondOperand);
 
@@ -75,7 +70,7 @@ public class Test
     [InlineData(13, 6, 7)]
     public void Calculate_Sub_SubOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        SubOperator subOperator = new SubOperator();
+        var subOperator = new SubOperator();
         
         int answer = subOperator.Calculate(firstOperand, secondOperand);
 
@@ -90,7 +85,7 @@ public class Test
     [InlineData(13, 6, 13*6)]
     public void Calculate_Multiply_MultiplyOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        MultiplyOperator multiplyOperator = new MultiplyOperator();
+        var multiplyOperator = new MultiplyOperator();
         
         int answer = multiplyOperator.Calculate(firstOperand, secondOperand);
 
@@ -105,7 +100,7 @@ public class Test
     [InlineData(13, 6, 2)]
     public void Calculate_Division_DivisionOfTwoNumbers(int firstOperand, int secondOperand, int expected)
     {
-        DivisionOperator divisionOperator = new DivisionOperator();
+        var divisionOperator = new DivisionOperator();
         
         int answer = divisionOperator.Calculate(firstOperand, secondOperand);
 
@@ -116,10 +111,9 @@ public class Test
     public void Calculate_DivisionByZero_Exception() {
         int firstOperand = 12;
         int secondOperand = 0;
-        DivisionOperator divisionOperator = new DivisionOperator();
-        int answer;
+        var divisionOperator = new DivisionOperator();
 
-        Action act = () => answer = divisionOperator.Calculate(firstOperand, secondOperand);
+        Action act = () => divisionOperator.Calculate(firstOperand, secondOperand);
 
         Assert.Throws<DivideByZeroException>(act);
     }
@@ -129,13 +123,13 @@ public class Test
     [InlineData(2, 5, OperatorEnum.sub, -3)]
     [InlineData(2, 5, OperatorEnum.division, 0)]
     [InlineData(2, 5, OperatorEnum.multiply, 10)]
-    public void Calculator_Calculate_Sum_SumOfTwoNumbers(int firstOperand, int secondOperand, OperatorEnum operatorType, int expected) {
+    public void Calculator_Calculate_ExpectedCalculatorResult(int firstOperand, int secondOperand, OperatorEnum operatorType, int expected) {
         IOperatorProvider provider = Substitute.For<IOperatorProvider>();
         provider.GetOperator(OperatorEnum.sum).Returns(new SumOperator());
         provider.GetOperator(OperatorEnum.sub).Returns(new SubOperator());
         provider.GetOperator(OperatorEnum.division).Returns(new DivisionOperator());
         provider.GetOperator(OperatorEnum.multiply).Returns(new MultiplyOperator());
-        Calculator calculator = new Calculator(provider);
+        var calculator = new Calculator(provider);
 
         int answer = calculator.Calculate(firstOperand, secondOperand, operatorType);
 
