@@ -21,10 +21,10 @@ public class IncludeOneHandler : ISearchHandler
             try
             {
                 answer = answer.Union(invertedIndex.Database[includeOneQuery.Substring(1).ToUpper()]);
-            }   
+            }
             catch
             {
-                ;
+                // ignored
             }
         }
 

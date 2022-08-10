@@ -44,7 +44,7 @@ public class SearchHandlerTest
     }
 
     [Fact]
-    public void Handle_IncludeOneHandlerQuery1_SizeIsThree()
+    public void Handle_IncludeOneHandlerQueryWithoutPlus_SizeIsThree()
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _queryWithoutPlus);
         
@@ -55,7 +55,7 @@ public class SearchHandlerTest
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("3")]
-    public void Handle_IncludeOneHandlerQuery1_ContainsAllExpectations(string expected)
+    public void Handle_IncludeOneHandlerQueryWithoutPlus_ContainsAllExpectations(string expected)
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _queryWithoutPlus);
         
@@ -63,7 +63,7 @@ public class SearchHandlerTest
     }
 
     [Fact]
-    public void Handle_IncludeOneHandlerQuery4_SizeIsThree()
+    public void Handle_IncludeOneHandlerQueryWithPlus_SizeIsThree()
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _queryWithPlus);
 
@@ -74,7 +74,7 @@ public class SearchHandlerTest
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("3")]
-    public void Handle_IncludeOneHandlerQuery4_ContainsAllExpectations(string expected)
+    public void Handle_IncludeOneHandlerQueryWithPlus_ContainsAllExpectations(string expected)
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _queryWithPlus);
         
@@ -82,7 +82,7 @@ public class SearchHandlerTest
     }
     
     [Fact]
-    public void Handle_IncludeOneHandlerQuery5_SizeIsTwo()
+    public void Handle_IncludeOneHandlerAnotherQueryWithPlus_SizeIsTwo()
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _anotherQueryWithPlus);
 
@@ -92,7 +92,7 @@ public class SearchHandlerTest
     [Theory]
     [InlineData("1")]
     [InlineData("2")]
-    public void Handle_IncludeOneHandlerQuery5_ContainsAllExpectations(string expected)
+    public void Handle_IncludeOneHandlerAnotherQueryWithPlus_ContainsAllExpectations(string expected)
     {
         var answer = _includeOneHandler.Handle(_invertedIndex, _anotherQueryWithPlus);
         
@@ -100,7 +100,7 @@ public class SearchHandlerTest
     }
     
     [Fact]
-    public void Handle_ExcludeAllHandlerQuery2_SizeIsThree()
+    public void Handle_ExcludeAllHandlerQueryWithoutMinus_SizeIsThree()
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryWithoutMinus);
         
@@ -111,7 +111,7 @@ public class SearchHandlerTest
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("3")]
-    public void Handle_ExcludeAllHandlerQuery2_ContainsAllExpectations(string expected)
+    public void Handle_ExcludeAllHandlerQueryWithoutMinus_ContainsAllExpectations(string expected)
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryWithoutMinus);
         
@@ -119,7 +119,7 @@ public class SearchHandlerTest
     }
     
     [Fact]
-    public void Handle_ExcludeAllHandlerQuery3_SizeIsThree()
+    public void Handle_ExcludeAllHandlerQueryWithUnusedMinus_SizeIsThree()
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryWithUnusedMinus);
         
@@ -130,7 +130,7 @@ public class SearchHandlerTest
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("3")]
-    public void Handle_ExcludeAllHandlerQuery3_ContainsAllExpectations(string expected)
+    public void Handle_ExcludeAllHandlerQueryWithUnusedMinus_ContainsAllExpectations(string expected)
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryWithUnusedMinus);
         
@@ -138,7 +138,7 @@ public class SearchHandlerTest
     }
     
     [Fact]
-    public void Handle_ExcludeAllHandlerQuery6_SizeIsTwo()
+    public void Handle_ExcludeAllHandlerQueryToCheckMinus_SizeIsTwo()
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryToCheckMinus);
         
@@ -148,7 +148,7 @@ public class SearchHandlerTest
     [Theory]
     [InlineData("2")]
     [InlineData("3")]
-    public void Handle_ExcludeAllHandlerQuery6_ContainsAllExpectations(string expected)
+    public void Handle_ExcludeAllHandlerQueryToCheckMinus_ContainsAllExpectations(string expected)
     {
         var answer = _excludeAllHandler.Handle(_invertedIndex, _queryToCheckMinus);
         
@@ -156,7 +156,7 @@ public class SearchHandlerTest
     }
 
     [Fact]
-    public void Handle_IncludeAllHandlerQuery3_SizeIsOne()
+    public void Handle_IncludeAllHandlerQueryWithUnusedMinus_SizeIsOne()
     {
         var answer = _includeAllHandler.Handle(_invertedIndex, _queryWithUnusedMinus);
         
@@ -165,7 +165,7 @@ public class SearchHandlerTest
     
     [Theory]
     [InlineData("1")]
-    public void Handle_IncludeAllHandlerQuery3_ContainsAllExpectations(string expected)
+    public void Handle_IncludeAllHandlerQueryWithUnusedMinus_ContainsAllExpectations(string expected)
     {
         var answer = _includeAllHandler.Handle(_invertedIndex, _queryWithUnusedMinus);
         
@@ -173,7 +173,7 @@ public class SearchHandlerTest
     }
 
     [Fact]
-    public void Handle_IncludeAllHandlerQuery2_SizeIsThree()
+    public void Handle_IncludeAllHandlerQueryWithoutMinus_SizeIsThree()
     {
         var answer = _includeAllHandler.Handle(_invertedIndex, _queryWithoutMinus);
         
@@ -183,7 +183,7 @@ public class SearchHandlerTest
     [Theory]
     [InlineData("1")]
 
-    public void Handle_IncludeAllHandlerQuery2_ContainsAllExpectations(string expected)
+    public void Handle_IncludeAllHandlerQueryWithoutMinus_ContainsAllExpectations(string expected)
     {
         var answer = _includeAllHandler.Handle(_invertedIndex, _queryWithoutMinus);
         
