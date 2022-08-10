@@ -4,13 +4,20 @@ namespace Models;
 
 public class SchoolContext : DbContext
 {
+    private readonly string _password;
+    
     public DbSet<Student> Students { get; set; }
     public DbSet<Grade> Grades { get; set; }
+
+    public SchoolContext(string password)
+    {
+        _password = password;
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql(
-            "Server=localhost;Port=5432;Database=school;User Id=postgres;Password=password;");
+            $"Server=127.0.0.1;Port=5432;Database=school;User Id=postgres;Password={_password};");
         
     }
 
