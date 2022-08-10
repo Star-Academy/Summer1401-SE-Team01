@@ -33,10 +33,10 @@ public class InvertedIndexBuilderTest
     [Fact]
     public void Build_AddSomeFile_TheInvertedIndexBuiltCorrectly()
     {
-        (string name, string content)[] inputToBuilder = {
-            new("1", "This is a Text document !"),
-            new("2", "Hello What a great day it is"),
-            new("3", "Hello Please put this into the microwave")
+        Document[] inputToBuilder = {
+            new Document("1", "This is a Text document !"),
+            new Document("2", "Hello What a great day it is"),
+            new Document("3", "Hello Please put this into the microwave")
         };
 
         var result = _indexBuilder.Build(inputToBuilder);
