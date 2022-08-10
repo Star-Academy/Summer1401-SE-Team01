@@ -12,8 +12,6 @@ public class Grade
     
     public int StudentNumber { get; set; }
     
-    [JsonIgnore]
-    public Student Student { get; set; }
 
     public override string ToString()
     {

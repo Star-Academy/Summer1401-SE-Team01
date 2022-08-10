@@ -6,7 +6,8 @@ namespace Models;
 
 public class Student
 {
-    [Key]
+    [JsonIgnore]
+    public int Id { get; set; }
     public int StudentNumber { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
