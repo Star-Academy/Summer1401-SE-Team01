@@ -13,4 +13,16 @@ public class SchoolContext : DbContext
             "Server=localhost;Port=5432;Database=school;User Id=postgres;Password=password;");
         
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Grade>(entity =>
+        {
+            entity.HasOne(t => t.Student)
+                .WithMany(s => s.Grades)
+                .HasForeignKey(g => g.StudentNumber)
+                .HasConstraintName("FK_Grade_Student");
+
+        });
+    }
 }
