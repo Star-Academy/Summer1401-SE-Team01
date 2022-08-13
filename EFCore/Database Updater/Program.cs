@@ -11,7 +11,7 @@ Grade[] grades = jsonDeserializer.Deserialize<Grade[]>(File.ReadAllText(gradesFi
 
 foreach (var grade in grades)
 {
-    students[grade.StudentNumber - 1].Grades.Add(grade);
+    students.Single(s => s.StudentNumber == grade.StudentNumber).Grades.Add(grade);
 }
 
 using (var context = new SchoolContext())
