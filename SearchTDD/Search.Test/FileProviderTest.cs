@@ -1,23 +1,20 @@
-using System;
-using System.IO;
-using System.Linq;
-using Search;
 using Xunit.Abstractions;
 
 namespace Search.Test;
 
 public class FileProviderTest: IDisposable
 {
-    private readonly ITestOutputHelper _testOutputHelper;
-    private FileProvider _fileProvider;
+    private readonly FileProvider _fileProvider;
 
-    private static (string name, string content) expected = new("1", "This is a Text document !");
-
-    public FileProviderTest(ITestOutputHelper testOutputHelper)
+    public FileProviderTest()
     {
-        _testOutputHelper = testOutputHelper;
         _fileProvider = new FileProvider();
+        
+        CreateFiles();
+    }
 
+    private void CreateFiles()
+    {
         Directory.CreateDirectory("EmptyTestFolder");
         
         Directory.CreateDirectory("OneTestFile");
@@ -40,21 +37,21 @@ public class FileProviderTest: IDisposable
     public void GetData_EmptyTestFolder_EmptyIEnumerable()
     {
         var result =_fileProvider.GetData("EmptyTestFolder");
-        Assert.Equal(0,result.Count());
+        Assert.Empty(result);
     }
 
     [Fact]
     public void GetData_OneFileTestFolder_SizeIsOne()
     {
         var result = _fileProvider.GetData("OneTestFile");
-        Assert.Equal(1 , result.Count());
+        Assert.Single(result);
     }
 
     [Fact]
     public void GetData_OneTestFileFolder_ContainsTheFile()
     {
         var result = _fileProvider.GetData("OneTestFile");
-        (string name, string context) expected = new ("1", "This is a Text document !");
+        Document expected = new ("1", "This is a Text document !");
 
         Assert.Contains(expected, result);
     }
@@ -70,8 +67,7 @@ public class FileProviderTest: IDisposable
     public void GetData_TestFilesFolder_ContainsFiles()
     {
         var result = _fileProvider.GetData("TestFiles");
-        _testOutputHelper.WriteLine(result.ToString());
-        (string name, string content)[] expects = new (string name, string content)[]
+        var expects = new Document[]
         {
             new("1", "This is a Text document !"),
             new("2", "Hello What a great day it is"),

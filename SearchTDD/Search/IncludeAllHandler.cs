@@ -1,5 +1,4 @@
-﻿using System.Linq;
-namespace Search;
+﻿namespace Search;
 
 public class IncludeAllHandler : ISearchHandler
 {
@@ -24,7 +23,7 @@ public class IncludeAllHandler : ISearchHandler
             }
             catch (KeyNotFoundException e)
             {
-                ;
+                return new List<string>();
             }
         }
 

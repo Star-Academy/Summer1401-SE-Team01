@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Search;
 
 public interface ISearchHandler

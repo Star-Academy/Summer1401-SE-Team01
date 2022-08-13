@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
-	<PackageId>StarAcademy.CodeStar1401.Team01.Search</PackageId>
-	<Authors>"Team01"</Authors>
-	<Company>Star Academy</Company>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="StarAcademy.CodeStar1401.Team01.Search" Version="1.0.2" />
+    </ItemGroup>
 
 </Project>

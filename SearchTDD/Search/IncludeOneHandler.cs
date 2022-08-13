@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 namespace Search;
 
 public class IncludeOneHandler : ISearchHandler
@@ -25,7 +24,7 @@ public class IncludeOneHandler : ISearchHandler
             }
             catch
             {
-                ;
+                // ignored
             }
         }
 
