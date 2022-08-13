@@ -21,4 +21,13 @@
       <ProjectReference Include="..\Models\Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="students.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="grades.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
