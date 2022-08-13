@@ -4,7 +4,7 @@ public class Program
 {
     public static void Main(string [] args)
     {
-        string FilePath = Path.GetFullPath(@"TestFiles");
+        var FilePath = Path.GetFullPath(@"TestFiles");
         var fileProvider = new FileProvider();
         var documents = fileProvider.GetData(FilePath);
         var invertedIndex = new InvertedIndexBuilder().Build(documents);
