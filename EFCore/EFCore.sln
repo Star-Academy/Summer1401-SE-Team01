@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{2CCE1219-124B-44F3-865F-54C75F09880D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Query", "Query\Query.csproj", "{49F9F361-1D44-40C0-AB60-4A310A9AA644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database Updater", "Database Updater\Database Updater.csproj", "{5CD82D39-EF28-4647-B330-04943919E1FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CCE1219-124B-44F3-865F-54C75F09880D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCE1219-124B-44F3-865F-54C75F09880D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCE1219-124B-44F3-865F-54C75F09880D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCE1219-124B-44F3-865F-54C75F09880D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F9F361-1D44-40C0-AB60-4A310A9AA644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F9F361-1D44-40C0-AB60-4A310A9AA644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F9F361-1D44-40C0-AB60-4A310A9AA644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F9F361-1D44-40C0-AB60-4A310A9AA644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD82D39-EF28-4647-B330-04943919E1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD82D39-EF28-4647-B330-04943919E1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD82D39-EF28-4647-B330-04943919E1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD82D39-EF28-4647-B330-04943919E1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
