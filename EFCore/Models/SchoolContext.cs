@@ -9,6 +9,6 @@ public class SchoolContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=school;User Id=postgres;Password=postgres;");
+        optionsBuilder.UseNpgsql($"Server={Config.server};Port={Config.port};Database={Config.dataBase};User Id={Config.userId};Password={Config.password}");
     }
 }
