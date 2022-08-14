@@ -6,7 +6,7 @@ const int numberOfTopStudents = 3;
 
 using (var context = new SchoolContext())
 {
-    var answer = context.Students.Include(s => s.Grades)
+    var topStudents = context.Students.Include(s => s.Grades)
         .OrderByDescending(s => s.Grades.Average(g => g.Score))
         .Take(numberOfTopStudents);
     
