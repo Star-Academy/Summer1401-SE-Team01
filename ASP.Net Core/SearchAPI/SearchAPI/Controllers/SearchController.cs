@@ -4,25 +4,17 @@ using Search;
 namespace SearchAPI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class SearchController : Controller
 {
-    static readonly string _filePath = Path.GetFullPath(@"TestFiles");
     private ISearchEngine _searchEngine;
     
-    public SearchController()
+    public SearchController(ISearchEngine searchEngine)
     {
-        var fileProvider = new FileProvider();
-        var documents = fileProvider.GetData(_filePath);
-        var invertedIndex = new InvertedIndexBuilder().Build(documents);
-        var includeAllHandler = new IncludeAllHandler();
-        includeAllHandler.Next = new IncludeOneHandler();
-        includeAllHandler.Next.Next = new ExcludeAllHandler();
-
-        _searchEngine = new SearchEngine(invertedIndex, includeAllHandler);
+        _searchEngine = searchEngine;
     }
-
-    [HttpGet("[action]")]
+    
+    [HttpGet]
     public ActionResult<IEnumerable<string>> Query(string query)
     {
         return Ok(_searchEngine.Query(query));
