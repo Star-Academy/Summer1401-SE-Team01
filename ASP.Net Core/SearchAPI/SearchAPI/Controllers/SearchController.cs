@@ -19,7 +19,7 @@ public class SearchController : Controller
         includeAllHandler.Next = new IncludeOneHandler();
         includeAllHandler.Next.Next = new ExcludeAllHandler();
 
-        var searchEngine = new SearchEngine(invertedIndex, includeAllHandler);
+        _searchEngine = new SearchEngine(invertedIndex, includeAllHandler);
     }
 
     [HttpGet("[action]")]
