@@ -15,7 +15,7 @@ public class SearchController : Controller
     }
     
     [HttpGet]
-    public ActionResult<IEnumerable<string>> Query(string query)
+    public ActionResult<IEnumerable<string>> Search(string query)
     {
         return Ok(_searchEngine.Query(query));
     }
